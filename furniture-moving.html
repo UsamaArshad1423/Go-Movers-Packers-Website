@@ -1,0 +1,2597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furniture Moving - Easy Go Movers & Packers</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        :root {
+            --primary: #1264d6;
+            --primary-dark: #0b4da8;
+            --secondary: #e21d2b;
+            --dark: #111827;
+            --text: #5f6672;
+            --light: #f5f8fc;
+            --white: #ffffff;
+            --border: #e5eaf1;
+            --shadow: 0 15px 40px rgba(16, 36, 66, 0.10);
+            --transition: all 0.35s ease;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+        }
+
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+
+        /* =========================================================
+           TOP BAR
+           SAME AS ABOUT-US.HTML
+        ========================================================= */
+
+        .top-bar {
+            background: var(--dark);
+            color: #fff;
+            font-size: 13px;
+        }
+
+
+        .top-bar-inner {
+            min-height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+
+        .top-contact {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+
+        .top-contact a,
+        .top-contact span {
+            color: #dbe4f0;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            transition: var(--transition);
+        }
+
+
+        .top-contact a:hover {
+            color: #fff;
+        }
+
+
+        .top-contact i {
+            color: #4e91ff;
+        }
+
+
+        .top-social {
+            display: flex;
+            gap: 8px;
+        }
+
+
+        .top-social a {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: var(--transition);
+        }
+
+
+        .top-social a:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           NAVBAR
+           EXACT SAME AS ABOUT-US.HTML
+        ========================================================= */
+
+        .main-navbar {
+            background: rgba(255, 255, 255, 0.98);
+            min-height: 82px;
+
+            box-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.05);
+
+            position: relative;
+            z-index: 1000;
+        }
+
+
+        .navbar-brand img {
+            width: 155px;
+            height: auto;
+        }
+
+
+        .main-navbar .nav-link {
+            color: var(--dark);
+            font-size: 14px;
+            font-weight: 600;
+            padding: 30px 13px !important;
+            transition: var(--transition);
+            position: relative;
+        }
+
+
+        .main-navbar .nav-link::after {
+            content: "";
+
+            position: absolute;
+
+            left: 13px;
+            right: 13px;
+
+            bottom: 20px;
+
+            height: 2px;
+
+            background: var(--secondary);
+
+            transform: scaleX(0);
+
+            transition: var(--transition);
+        }
+
+
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link.active {
+            color: var(--primary);
+        }
+
+
+        .main-navbar .nav-link:hover::after,
+        .main-navbar .nav-link.active::after {
+            transform: scaleX(1);
+        }
+
+
+        /* =========================================================
+           DROPDOWN
+        ========================================================= */
+
+        .dropdown-menu {
+            border: none;
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: var(--shadow);
+            min-width: 240px;
+        }
+
+
+        .dropdown-item {
+            padding: 11px 14px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+
+        .dropdown-item i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
+
+        .dropdown-item:hover {
+            background: #eef5ff;
+            color: var(--primary);
+            transform: translateX(4px);
+        }
+
+
+        /* =========================================================
+           BOOK BUTTON
+        ========================================================= */
+
+        .navbar-book-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            background: var(--secondary);
+            color: #fff;
+
+            padding: 12px 22px;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+
+        .navbar-book-btn:hover {
+            background: var(--primary);
+            color: #fff;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(18, 100, 214, 0.25);
+        }
+
+
+        /* =========================================================
+           MOBILE NAVBAR
+        ========================================================= */
+
+        .navbar-toggler {
+            border: 1px solid #dbe4f0;
+            padding: 8px 10px;
+            border-radius: 8px;
+        }
+
+
+        .navbar-toggler:focus {
+            box-shadow:
+                0 0 0 3px rgba(18, 100, 214, 0.10);
+        }
+
+
+        /* =========================================================
+           FURNITURE HERO
+        ========================================================= */
+
+        .furniture-hero {
+            position: relative;
+            height: 420px;
+            overflow: hidden;
+        }
+
+
+        .furniture-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .furniture-hero-overlay {
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 18, 40, 0.82) 0%,
+                    rgba(5, 18, 40, 0.58) 45%,
+                    rgba(5, 18, 40, 0.15) 100%
+                );
+        }
+
+
+        .furniture-hero-content {
+            position: absolute;
+
+            top: 50%;
+            left: 8%;
+
+            transform: translateY(-50%);
+
+            color: #fff;
+
+            z-index: 2;
+
+            max-width: 650px;
+        }
+
+
+        .furniture-hero-content span {
+            color: #cfe1ff;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .furniture-hero-content h1 {
+            font-size: clamp(40px, 5vw, 62px);
+
+            line-height: 1.12;
+
+            font-weight: 800;
+
+            margin: 12px 0 15px;
+        }
+
+
+        .furniture-hero-content p {
+            color: #e6edf7;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            max-width: 600px;
+        }
+
+
+        .breadcrumb-box {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-size: 13px;
+
+            color: #dbe4f0;
+        }
+
+
+        .breadcrumb-box a {
+            color: #fff;
+        }
+
+
+        .breadcrumb-box a:hover {
+            color: #4e91ff;
+        }
+
+
+        /* =========================================================
+           SECTION TITLES
+        ========================================================= */
+
+        .section-title span,
+        .section-heading span,
+        .small-heading {
+            color: var(--primary);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .section-title h2,
+        .section-heading h2 {
+            color: var(--dark);
+
+            font-size: 38px;
+
+            line-height: 1.25;
+
+            font-weight: 700;
+
+            margin: 12px 0 15px;
+        }
+
+
+        .section-title h2 strong,
+        .section-heading h2 strong {
+            color: var(--primary);
+        }
+
+
+        .section-title p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           MAIN SERVICE SECTION
+        ========================================================= */
+
+        .service-section {
+            background: #fff;
+        }
+
+
+        .service-image-wrapper {
+            position: relative;
+            padding: 15px;
+        }
+
+
+        .service-image-wrapper::before {
+            content: "";
+
+            position: absolute;
+
+            width: 80%;
+            height: 80%;
+
+            left: 0;
+            bottom: 0;
+
+            background: #eaf2ff;
+
+            border-radius: 20px;
+
+            z-index: 0;
+        }
+
+
+        .service-image-wrapper img {
+            position: relative;
+
+            z-index: 1;
+
+            width: 100%;
+
+            border-radius: 20px;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .service-badge {
+            position: absolute;
+
+            z-index: 2;
+
+            right: 0;
+            bottom: 35px;
+
+            background: var(--secondary);
+
+            color: #fff;
+
+            border-radius: 15px;
+
+            padding: 18px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .service-badge i {
+            font-size: 28px;
+        }
+
+
+        .service-badge span {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+
+        .service-text {
+            line-height: 1.9;
+            margin: 20px 0;
+        }
+
+
+        .service-features {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+            margin: 30px 0;
+        }
+
+
+        .service-features div {
+            display: flex;
+
+            gap: 10px;
+
+            align-items: flex-start;
+
+            color: var(--dark);
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+
+        .service-features i {
+            color: var(--primary);
+
+            font-size: 18px;
+        }
+
+
+        .primary-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            background: var(--secondary);
+
+            color: #fff;
+
+            padding: 13px 23px;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+        }
+
+
+        .primary-btn:hover {
+            color: #fff;
+
+            background: var(--primary);
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 20px rgba(18, 100, 214, .2);
+        }
+
+
+        /* =========================================================
+           SERVICE FEATURES
+        ========================================================= */
+
+        .features-section {
+            background: #f7f9fc;
+        }
+
+
+        .feature-card {
+            height: 100%;
+
+            padding: 30px 25px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            transition: var(--transition);
+        }
+
+
+        .feature-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .feature-icon {
+            width: 60px;
+
+            height: 60px;
+
+            border-radius: 14px;
+
+            background: #eaf2ff;
+
+            color: var(--primary);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+
+            transition: var(--transition);
+        }
+
+
+        .feature-card:hover .feature-icon {
+            background: var(--primary);
+            color: #fff;
+        }
+
+
+        .feature-card h3 {
+            color: var(--dark);
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+        }
+
+
+        .feature-card p {
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           PROCESS
+        ========================================================= */
+
+        .process-section {
+            background: #fff;
+        }
+
+
+        .process-card {
+            height: 100%;
+
+            position: relative;
+
+            text-align: center;
+
+            padding: 35px 25px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            transition: var(--transition);
+
+            overflow: hidden;
+        }
+
+
+        .process-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .step-number {
+            position: absolute;
+
+            top: 12px;
+
+            right: 18px;
+
+            color: #e8eef7;
+
+            font-size: 55px;
+
+            font-weight: 800;
+        }
+
+
+        .process-icon {
+            width: 85px;
+
+            height: 85px;
+
+            margin: 25px auto 20px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #eaf2ff;
+
+            color: var(--primary);
+
+            font-size: 30px;
+
+            transition: var(--transition);
+        }
+
+
+        .process-card:hover .process-icon {
+            background: var(--primary);
+
+            color: #fff;
+        }
+
+
+        .process-card h3 {
+            color: var(--dark);
+
+            font-size: 18px;
+
+            font-weight: 700;
+        }
+
+
+        .process-card p {
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           CTA
+           SAME STYLE AS ABOUT-US.HTML
+        ========================================================= */
+
+        .cta-section {
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--primary);
+
+            min-height: 230px;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .cta-image {
+            position: absolute;
+
+            inset: 0 auto 0 0;
+
+            width: 35%;
+
+            opacity: .22;
+        }
+
+
+        .cta-image img {
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .cta-content {
+            position: relative;
+
+            z-index: 2;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+            padding: 50px 0;
+        }
+
+
+        .cta-content span {
+            color: #cfe1ff;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+        }
+
+
+        .cta-content h2 {
+            color: #fff;
+
+            font-size: 32px;
+
+            font-weight: 700;
+
+            margin: 8px 0 0;
+        }
+
+
+        .cta-content h2 strong {
+            color: #ffd8dc;
+        }
+
+
+        .cta-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            background: var(--secondary);
+
+            color: #fff;
+
+            padding: 14px 24px;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            white-space: nowrap;
+
+            transition: var(--transition);
+        }
+
+
+        .cta-btn:hover {
+            background: #fff;
+
+            color: var(--primary);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           FOOTER
+           EXACT SAME AS ABOUT-US.HTML
+        ========================================================= */
+
+        .main-footer {
+            background: #0d1624;
+
+            color: #aeb9c8;
+
+            padding-top: 70px;
+        }
+
+
+        .footer-logo {
+            width: 160px;
+
+            margin-bottom: 20px;
+
+            background: #fff;
+
+            padding: 7px;
+
+            border-radius: 7px;
+        }
+
+
+        .footer-company p {
+            max-width: 360px;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .footer-social {
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 22px;
+        }
+
+
+        .footer-social a {
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.08);
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            transition: var(--transition);
+        }
+
+
+        .footer-social a:hover {
+            background: var(--primary);
+
+            transform: translateY(-3px);
+        }
+
+
+        .footer-column h4 {
+            color: #fff;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            margin-bottom: 22px;
+
+            position: relative;
+
+            padding-bottom: 12px;
+        }
+
+
+        .footer-column h4::after {
+            content: "";
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            width: 35px;
+
+            height: 2px;
+
+            background: var(--secondary);
+        }
+
+
+        .footer-column ul {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+
+        .footer-column ul li a {
+            color: #aeb9c8;
+
+            font-size: 13px;
+
+            transition: var(--transition);
+        }
+
+
+        .footer-column ul li a:hover {
+            color: #fff;
+
+            padding-left: 5px;
+        }
+
+
+        .footer-contact > div {
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .footer-contact i {
+            color: #4e91ff;
+
+            font-size: 17px;
+
+            min-width: 18px;
+        }
+
+
+        .footer-contact a {
+            color: #aeb9c8;
+
+            transition: var(--transition);
+        }
+
+
+        .footer-contact a:hover {
+            color: #fff;
+        }
+
+
+        .footer-bottom {
+            margin-top: 60px;
+
+            padding: 20px 0;
+
+            border-top:
+                1px solid rgba(255,255,255,.08);
+        }
+
+
+        .footer-bottom-inner {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .footer-bottom p {
+            margin: 0;
+
+            font-size: 11px;
+
+            color: #8390a1;
+        }
+
+
+        .footer-bottom strong {
+            color: #fff;
+        }
+
+
+        /* =========================================================
+           WHATSAPP
+           EXACT SAME AS ABOUT-US.HTML
+        ========================================================= */
+
+        .whatsapp-btn {
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            z-index: 999;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 13px 20px;
+
+            border-radius: 50px;
+
+            background: #25d366;
+
+            color: #fff;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 8px 25px rgba(37, 211, 102, .35);
+
+            transition: var(--transition);
+        }
+
+
+        .whatsapp-btn i {
+            font-size: 20px;
+        }
+
+
+        .whatsapp-btn:hover {
+            color: #fff;
+
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================================================
+           RESPONSIVE
+           SAME BREAKPOINTS AS ABOUT-US.HTML
+        ========================================================= */
+
+        @media (max-width: 991px) {
+
+            .top-contact {
+                gap: 12px;
+            }
+
+
+            .top-social {
+                display: none;
+            }
+
+
+            .main-navbar {
+                min-height: 72px;
+            }
+
+
+            .navbar-brand img {
+                width: 135px;
+            }
+
+
+            .main-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+
+            .main-navbar .nav-link::after {
+                display: none;
+            }
+
+
+            .navbar-nav {
+                padding: 15px 0;
+            }
+
+
+            .navbar-book-btn {
+                margin-bottom: 15px;
+            }
+
+
+            .section-title h2,
+            .section-heading h2 {
+                font-size: 32px;
+            }
+
+
+            .cta-content {
+                padding: 40px 0;
+            }
+
+
+            .cta-content h2 {
+                font-size: 27px;
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .section-padding {
+                padding: 65px 0;
+            }
+
+
+            .top-bar {
+                display: none;
+            }
+
+
+            .furniture-hero {
+                height: 360px;
+            }
+
+
+            .furniture-hero-content {
+                left: 25px;
+
+                right: 25px;
+            }
+
+
+            .furniture-hero-content h1 {
+                font-size: 38px;
+            }
+
+
+            .furniture-hero-content p {
+                font-size: 13px;
+            }
+
+
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+
+
+            .service-badge {
+                right: 10px;
+
+                bottom: 20px;
+            }
+
+
+            .cta-content {
+                flex-direction: column;
+
+                align-items: flex-start;
+            }
+
+
+            .cta-content h2 {
+                font-size: 25px;
+            }
+
+
+            .footer-bottom-inner {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+
+        @media (max-width: 575px) {
+
+            .navbar-brand img {
+                width: 120px;
+            }
+
+
+            .furniture-hero {
+                height: 320px;
+            }
+
+
+            .furniture-hero-content h1 {
+                font-size: 32px;
+            }
+
+
+            .furniture-hero-content p {
+                font-size: 12px;
+            }
+
+
+            .section-title h2,
+            .section-heading h2 {
+                font-size: 28px;
+            }
+
+
+            .service-image-wrapper {
+                padding: 5px;
+            }
+
+
+            .service-badge {
+                padding: 12px 14px;
+            }
+
+
+            .whatsapp-btn {
+                right: 15px;
+
+                bottom: 15px;
+
+                width: 52px;
+
+                height: 52px;
+
+                padding: 0;
+
+                justify-content: center;
+
+                border-radius: 50%;
+            }
+
+
+            .whatsapp-btn span {
+                display: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+     EXACT SAME AS ABOUT-US.HTML
+========================================================= -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div class="top-bar-inner">
+
+            <div class="top-contact">
+
+                <a href="mailto:info@easygomovers.com">
+                    <i class="bi bi-envelope-fill"></i>
+                    info@gomovers.com
+                </a>
+
+
+                <a href="tel:+971504996091">
+                    <i class="bi bi-telephone-fill"></i>
+                    +92 343 1535799
+                </a>
+
+
+                <span>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Kahuta, Rawalpindi, Pakistan
+                </span>
+
+            </div>
+
+
+            <div class="top-social">
+
+                <a href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-pinterest"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NAVBAR
+     EXACT SAME AS ABOUT-US.HTML
+========================================================= -->
+
+<nav class="main-navbar navbar navbar-expand-lg">
+
+    <div class="container">
+
+
+        <a
+            class="navbar-brand"
+            href="index.html">
+
+            <img
+                src="./images/logo.png"
+                alt="Easy Go Movers Logo">
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+
+            <ul class="navbar-nav mx-auto align-items-lg-center">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about-us.html">
+
+                        About Us
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle active"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown">
+
+                        Our Services
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="furniture-moving.html">
+
+                                <i class="bi bi-box-seam"></i>
+
+                                Furniture Moving
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="house-relocation.html">
+
+                                <i class="bi bi-house-door"></i>
+
+                                House Relocation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="pack-move.html">
+
+                                <i class="bi bi-boxes"></i>
+
+                                Packing & Moving
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="office-relocation.html">
+
+                                <i class="bi bi-building"></i>
+
+                                Office Relocation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="apartment-reallocation.html">
+
+                                <i class="bi bi-buildings"></i>
+
+                                Apartment Relocation
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="why-choose.html">
+
+                        Why Choose Us
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="our-blog.html">
+
+                        Our Blogs
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact-us.html">
+
+                        Contact Us
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <a
+                href="book-now.html"
+                class="navbar-book-btn">
+
+                Book Now
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     FURNITURE MOVING HERO
+========================================================= -->
+
+<section class="furniture-hero">
+
+    <img
+        src="./images/furniture-move.jpg"
+        alt="Furniture Moving Service">
+
+
+    <div class="furniture-hero-overlay"></div>
+
+
+    <div class="furniture-hero-content">
+
+        <span>
+            PROFESSIONAL FURNITURE MOVING
+        </span>
+
+
+        <h1>
+            Furniture Moving
+        </h1>
+
+
+        <p>
+            Safe, reliable and professional furniture moving
+            services designed to make your relocation simple
+            and stress-free.
+        </p>
+
+
+        <div class="breadcrumb-box">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <a href="#">
+                Services
+            </a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <span>
+                Furniture Moving
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MAIN SERVICE
+========================================================= -->
+
+<section class="service-section section-padding">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6">
+
+                <div class="service-image-wrapper">
+
+                    <img
+                        src="./images/furniture-moving.jpg"
+                        alt="Furniture Moving Dubai"
+                        class="img-fluid">
+
+
+                    <div class="service-badge">
+
+                        <i class="bi bi-truck"></i>
+
+                        <span>
+                            Safe & Reliable<br>
+                            Furniture Moving
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="section-heading">
+
+                    <span>
+                        FURNITURE MOVING SERVICES
+                    </span>
+
+
+                    <h2>
+
+                        Move Your Furniture
+                        <strong>With Confidence</strong>
+
+                    </h2>
+
+                </div>
+
+
+                <p class="service-text">
+
+                    At Easy Go Movers & Packers, we provide
+                    professional furniture moving services
+                    designed to safely transport your valuable
+                    furniture from one location to another.
+
+                </p>
+
+
+                <p class="service-text">
+
+                    Whether you are moving a single piece of
+                    furniture or relocating an entire home,
+                    our experienced team carefully handles
+                    loading, transportation and unloading.
+
+                </p>
+
+
+                <div class="service-features">
+
+                    <div>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>
+                            Careful Furniture Handling
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>
+                            Professional Loading
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>
+                            Safe Transportation
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <span>
+                            Experienced Moving Team
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="contact-us.html"
+                    class="primary-btn">
+
+                    Get A Free Quote
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY CHOOSE OUR SERVICE
+========================================================= -->
+
+<section class="features-section section-padding">
+
+    <div class="container">
+
+
+        <div class="section-title text-center">
+
+            <span>
+                WHY CHOOSE OUR SERVICE
+            </span>
+
+
+            <h2>
+
+                Furniture Moving
+                <strong>Made Easy</strong>
+
+            </h2>
+
+
+            <p>
+
+                We combine experienced movers, careful handling
+                and reliable transportation to make your
+                furniture relocation smooth and convenient.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-shield-check"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Safe Handling
+                    </h3>
+
+
+                    <p>
+
+                        Our movers handle your furniture carefully
+                        to reduce the risk of damage during
+                        loading and transportation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-truck"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Reliable Transport
+                    </h3>
+
+
+                    <p>
+
+                        We provide dependable transportation
+                        solutions for furniture of different
+                        sizes and types.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-box-seam"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Protective Packing
+                    </h3>
+
+
+                    <p>
+
+                        Furniture can be protected with suitable
+                        packing materials before transportation
+                        when required.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-clock-history"></i>
+
+                    </div>
+
+
+                    <h3>
+                        On-Time Service
+                    </h3>
+
+
+                    <p>
+
+                        We value your schedule and work to
+                        complete your furniture move according
+                        to the agreed timing.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MOVING PROCESS
+========================================================= -->
+
+<section class="process-section section-padding">
+
+    <div class="container">
+
+
+        <div class="section-title text-center">
+
+            <span>
+                OUR MOVING PROCESS
+            </span>
+
+
+            <h2>
+
+                Simple Steps To A
+                <strong>Stress-Free Move</strong>
+
+            </h2>
+
+
+            <p>
+
+                Our straightforward process makes furniture
+                moving easier from start to finish.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="process-card">
+
+                    <span class="step-number">
+                        01
+                    </span>
+
+
+                    <div class="process-icon">
+
+                        <i class="bi bi-telephone"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Contact Us
+                    </h3>
+
+
+                    <p>
+
+                        Tell us about your furniture and
+                        moving requirements.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="process-card">
+
+                    <span class="step-number">
+                        02
+                    </span>
+
+
+                    <div class="process-icon">
+
+                        <i class="bi bi-clipboard-check"></i>
+
+                    </div>
+
+
+                    <h3>
+                        Get A Quote
+                    </h3>
+
+
+                    <p>
+
+                        Our team discusses your requirements
+                        and provides a suitable quotation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="process-card">
+
+                    <span class="step-number">
+                        03
+                    </span>
+
+
+                    <div class="process-icon">
+
+                        <i class="bi bi-box-seam"></i>
+
+                    </div>
+
+
+                    <h3>
+                        We Prepare
+                    </h3>
+
+
+                    <p>
+
+                        Our professional movers prepare and
+                        handle your furniture carefully.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="process-card">
+
+                    <span class="step-number">
+                        04
+                    </span>
+
+
+                    <div class="process-icon">
+
+                        <i class="bi bi-truck"></i>
+
+                    </div>
+
+
+                    <h3>
+                        We Move
+                    </h3>
+
+
+                    <p>
+
+                        Your furniture is transported safely
+                        to its destination.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section">
+
+
+    <div class="cta-image">
+
+        <img
+            src="./images/section-11-img1.PNG"
+            alt="Moving Service">
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="cta-content">
+
+
+            <div>
+
+                <span>
+                    READY TO MOVE?
+                </span>
+
+
+                <h2>
+
+                    Let Our Experts Make
+                    Your Move <strong>Easy</strong>
+
+                </h2>
+
+            </div>
+
+
+            <a
+                href="contact-us.html"
+                class="cta-btn">
+
+                Get A Free Quote
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+     EXACT SAME STRUCTURE AS ABOUT-US.HTML
+========================================================= -->
+
+<footer class="main-footer">
+
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- COMPANY -->
+
+            <div class="col-lg-4">
+
+                <div class="footer-company">
+
+
+                    <img
+                        src="./images/logo.png"
+                        alt="Easy Go Movers"
+                        class="footer-logo">
+
+
+                    <p>
+
+                        Easy Go Movers & Packers LLC,
+                        established in 2010, is a professional
+                        moving and furniture installation
+                        company providing reliable relocation
+                        solutions across the UAE.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+
+                        <a href="#">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+
+                        <a href="#">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- USEFUL LINKS -->
+
+            <div class="col-6 col-lg-2">
+
+                <div class="footer-column">
+
+
+                    <h4>
+                        Useful Links
+                    </h4>
+
+
+                    <ul>
+
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="about-us.html">
+                                About Us
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="why-choose.html">
+                                Why Choose Us
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="our-blog.html">
+                                Our Blogs
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="contact-us.html">
+                                Contact Us
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SERVICES -->
+
+            <div class="col-6 col-lg-3">
+
+                <div class="footer-column">
+
+
+                    <h4>
+                        Our Services
+                    </h4>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <a href="furniture-moving.html">
+                                Furniture Moving
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+                                House Relocation
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+                                Packing & Moving
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+                                Office Relocation
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+                                Apartment Relocation
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+                                Commercial Relocation
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-3">
+
+                <div class="footer-column">
+
+
+                    <h4>
+                        Contact Us
+                    </h4>
+
+
+                    <div class="footer-contact">
+
+
+                        <div>
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            <span>
+
+                                Kahuta, Rawalpindi,
+                                Pakistan
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="bi bi-envelope-fill"></i>
+
+                            <a
+                                href="mailto:info@easygomovers.com">
+
+                                info@gomovers.com
+
+                            </a>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="bi bi-telephone-fill"></i>
+
+                            <a
+                                href="tel:+971504996091">
+
+                                +92 343 1535799
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="footer-bottom-inner">
+
+
+                <p>
+
+                    © 2026 Go Movers & Packers.
+                    All Rights Reserved.
+
+                </p>
+
+
+                <p>
+
+                    Designed by
+                    <strong>
+                        Software Engineer Usama Arshad
+                    </strong>
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     WHATSAPP
+========================================================= -->
+
+<a
+    href="https://wa.me/923431535799"
+    class="whatsapp-btn"
+    target="_blank"
+    aria-label="Contact Easy Go Movers on WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+    <span>
+        WhatsApp Us
+    </span>
+
+</a>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

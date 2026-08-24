@@ -1,0 +1,2613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Office Relocation - Easy Go Movers & Packers</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================================
+           GLOBAL
+        ========================================================= */
+
+        :root {
+            --primary: #1264d6;
+            --primary-dark: #0b4da8;
+            --secondary: #e21d2b;
+            --dark: #111827;
+            --text: #5f6672;
+            --light: #f5f8fc;
+            --white: #ffffff;
+            --border: #e5eaf1;
+            --shadow: 0 15px 40px rgba(16, 36, 66, 0.10);
+            --transition: all 0.35s ease;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================================================
+           TOP BAR
+        ========================================================= */
+
+        .top-bar {
+            background: var(--dark);
+            color: #fff;
+            font-size: 13px;
+        }
+
+
+        .top-bar-inner {
+            min-height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .top-contact {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+
+        .top-contact a,
+        .top-contact span {
+            color: #dbe4f0;
+
+            display: flex;
+            align-items: center;
+
+            gap: 7px;
+
+            transition: var(--transition);
+        }
+
+
+        .top-contact a:hover {
+            color: #ffffff;
+        }
+
+
+        .top-contact i {
+            color: #4e91ff;
+        }
+
+
+        .top-social {
+            display: flex;
+            gap: 8px;
+        }
+
+
+        .top-social a {
+            width: 28px;
+            height: 28px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #ffffff;
+
+            transition: var(--transition);
+        }
+
+
+        .top-social a:hover {
+            background: var(--primary);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           NAVBAR
+        ========================================================= */
+
+        .main-navbar {
+            background: rgba(255, 255, 255, 0.98);
+
+            min-height: 82px;
+
+            box-shadow:
+                0 4px 20px rgba(0, 0, 0, 0.05);
+
+            position: relative;
+
+            z-index: 1000;
+        }
+
+
+        .navbar-brand img {
+            width: 155px;
+            height: auto;
+        }
+
+
+        .main-navbar .nav-link {
+            color: var(--dark);
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            padding: 30px 13px !important;
+
+            transition: var(--transition);
+
+            position: relative;
+        }
+
+
+        .main-navbar .nav-link::after {
+            content: "";
+
+            position: absolute;
+
+            left: 13px;
+            right: 13px;
+
+            bottom: 20px;
+
+            height: 2px;
+
+            background: var(--secondary);
+
+            transform: scaleX(0);
+
+            transition: var(--transition);
+        }
+
+
+        .main-navbar .nav-link:hover,
+        .main-navbar .nav-link.active {
+            color: var(--primary);
+        }
+
+
+        .main-navbar .nav-link:hover::after,
+        .main-navbar .nav-link.active::after {
+            transform: scaleX(1);
+        }
+
+
+        /* =========================================================
+           DROPDOWN
+        ========================================================= */
+
+        .dropdown-menu {
+            border: none;
+
+            border-radius: 12px;
+
+            padding: 10px;
+
+            box-shadow: var(--shadow);
+
+            min-width: 240px;
+        }
+
+
+        .dropdown-item {
+            padding: 11px 14px;
+
+            border-radius: 7px;
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            transition: var(--transition);
+        }
+
+
+        .dropdown-item i {
+            color: var(--primary);
+
+            margin-right: 8px;
+        }
+
+
+        .dropdown-item:hover {
+            background: #eef5ff;
+
+            color: var(--primary);
+
+            transform: translateX(4px);
+        }
+
+
+        /* =========================================================
+           BOOK NOW BUTTON
+        ========================================================= */
+
+        .navbar-book-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: var(--secondary);
+
+            color: #fff;
+
+            padding: 12px 22px;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+
+            white-space: nowrap;
+        }
+
+
+        .navbar-book-btn:hover {
+            background: var(--primary);
+
+            color: #fff;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 20px rgba(18, 100, 214, 0.25);
+        }
+
+
+        /* =========================================================
+           MOBILE NAVBAR
+        ========================================================= */
+
+        .navbar-toggler {
+            border: 1px solid #dbe4f0;
+
+            padding: 8px 10px;
+
+            border-radius: 8px;
+        }
+
+
+        .navbar-toggler:focus {
+            box-shadow:
+                0 0 0 3px rgba(18, 100, 214, 0.10);
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero-section {
+            position: relative;
+
+            width: 100%;
+
+            height: 430px;
+
+            overflow: hidden;
+        }
+
+
+        .hero-section img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+
+        .hero-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(5, 18, 40, 0.85) 0%,
+                    rgba(5, 18, 40, 0.58) 50%,
+                    rgba(5, 18, 40, 0.20) 100%
+                );
+        }
+
+
+        .hero-content {
+            position: absolute;
+
+            z-index: 2;
+
+            top: 50%;
+            left: 8%;
+
+            transform: translateY(-50%);
+
+            max-width: 650px;
+
+            color: #ffffff;
+        }
+
+
+        .hero-content span {
+            color: #cfe1ff;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .hero-content h1 {
+            font-size: clamp(38px, 5vw, 60px);
+
+            line-height: 1.15;
+
+            font-weight: 800;
+
+            margin: 12px 0 15px;
+        }
+
+
+        .hero-content p {
+            color: #e6edf7;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+
+            max-width: 580px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .breadcrumb-text {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-size: 13px;
+
+            color: #dbe4f0;
+        }
+
+
+        .breadcrumb-text a {
+            color: #ffffff;
+        }
+
+
+        .breadcrumb-text a:hover {
+            color: #4e91ff;
+        }
+
+
+        /* =========================================================
+           HERO BUTTON
+        ========================================================= */
+
+        .hero-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: var(--secondary);
+
+            color: #ffffff;
+
+            padding: 13px 24px;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+        }
+
+
+        .hero-btn:hover {
+            background: var(--primary);
+
+            color: #ffffff;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           INTRO SECTION
+        ========================================================= */
+
+        .intro-section {
+            padding: 90px 0;
+        }
+
+
+        .section-subtitle {
+            color: var(--primary);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+
+        .section-title {
+            color: var(--dark);
+
+            font-size: clamp(30px, 4vw, 44px);
+
+            font-weight: 800;
+
+            line-height: 1.25;
+
+            margin-bottom: 18px;
+        }
+
+
+        .section-line {
+            width: 55px;
+
+            height: 3px;
+
+            background: var(--secondary);
+
+            border-radius: 50px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .intro-text {
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            color: var(--text);
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================================
+           MAIN IMAGE
+        ========================================================= */
+
+        .service-image-wrapper {
+            position: relative;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .service-image-wrapper img {
+            width: 100%;
+
+            height: 440px;
+
+            object-fit: cover;
+
+            transition: transform .5s ease;
+        }
+
+
+        .service-image-wrapper:hover img {
+            transform: scale(1.04);
+        }
+
+
+        .image-badge {
+            position: absolute;
+
+            bottom: 20px;
+            left: 20px;
+
+            background: var(--secondary);
+
+            color: #ffffff;
+
+            padding: 13px 20px;
+
+            border-radius: 10px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            box-shadow: 0 8px 25px rgba(0,0,0,.20);
+        }
+
+
+        /* =========================================================
+           FEATURES
+        ========================================================= */
+
+        .feature-section {
+            padding: 85px 0;
+
+            background: var(--light);
+        }
+
+
+        .feature-card {
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 16px;
+
+            padding: 30px 24px;
+
+            height: 100%;
+
+            box-shadow:
+                0 8px 25px rgba(16, 36, 66, 0.05);
+
+            transition: var(--transition);
+        }
+
+
+        .feature-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow: var(--shadow);
+        }
+
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 14px;
+
+            background: #eef5ff;
+
+            color: var(--primary);
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+
+            transition: var(--transition);
+        }
+
+
+        .feature-card:hover .feature-icon {
+            background: var(--primary);
+
+            color: #ffffff;
+        }
+
+
+        .feature-card h4 {
+            color: var(--dark);
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            margin-bottom: 12px;
+        }
+
+
+        .feature-card p {
+            color: var(--text);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           PROCESS SECTION
+        ========================================================= */
+
+        .process-section {
+            padding: 90px 0;
+        }
+
+
+        .process-card {
+            text-align: center;
+
+            padding: 25px 18px;
+        }
+
+
+        .process-number {
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            color: #ffffff;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 8px 20px rgba(18, 100, 214, 0.20);
+        }
+
+
+        .process-card h4 {
+            color: var(--dark);
+
+            font-size: 17px;
+
+            font-weight: 700;
+
+            margin-bottom: 10px;
+        }
+
+
+        .process-card p {
+            color: var(--text);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin: 0;
+        }
+
+
+        /* =========================================================
+           CTA
+        ========================================================= */
+
+        .cta-section {
+            padding: 75px 0;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #1264d6,
+                    #0b4da8
+                );
+
+            color: #ffffff;
+        }
+
+
+        .cta-section h2 {
+            font-size: clamp(28px, 4vw, 40px);
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+
+        .cta-section p {
+            color: #dbeafe;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            max-width: 700px;
+
+            margin: 0 auto 25px;
+        }
+
+
+        .cta-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 13px 25px;
+
+            background: var(--secondary);
+
+            color: #ffffff;
+
+            border-radius: 50px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: var(--transition);
+        }
+
+
+        .cta-btn:hover {
+            background: #ffffff;
+
+            color: var(--primary);
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .main-footer {
+            background: #0d1624;
+
+            color: #aeb9c8;
+
+            padding-top: 70px;
+        }
+
+
+        .footer-logo {
+            width: 160px;
+
+            margin-bottom: 20px;
+
+            background: #ffffff;
+
+            padding: 7px;
+
+            border-radius: 7px;
+        }
+
+
+        .footer-company p {
+            max-width: 360px;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+        }
+
+
+        .footer-social {
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 22px;
+        }
+
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.08);
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            transition: var(--transition);
+        }
+
+
+        .footer-social a:hover {
+            background: var(--primary);
+
+            transform: translateY(-3px);
+        }
+
+
+        .footer-column h4 {
+            color: #ffffff;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            margin-bottom: 22px;
+
+            position: relative;
+
+            padding-bottom: 12px;
+        }
+
+
+        .footer-column h4::after {
+            content: "";
+
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 35px;
+            height: 2px;
+
+            background: var(--secondary);
+        }
+
+
+        .footer-column ul {
+            list-style: none;
+
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+
+        .footer-column ul li a {
+            color: #aeb9c8;
+
+            font-size: 13px;
+
+            transition: var(--transition);
+        }
+
+
+        .footer-column ul li a:hover {
+            color: #ffffff;
+
+            padding-left: 5px;
+        }
+
+
+        .footer-contact > div {
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 18px;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        .footer-contact i {
+            color: #4e91ff;
+
+            font-size: 17px;
+
+            min-width: 18px;
+        }
+
+
+        .footer-contact a {
+            color: #aeb9c8;
+
+            transition: var(--transition);
+        }
+
+
+        .footer-contact a:hover {
+            color: #ffffff;
+        }
+
+
+        .footer-bottom {
+            margin-top: 60px;
+
+            padding: 20px 0;
+
+            border-top:
+                1px solid rgba(255,255,255,.08);
+        }
+
+
+        .footer-bottom-inner {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .footer-bottom p {
+            margin: 0;
+
+            font-size: 11px;
+
+            color: #8390a1;
+        }
+
+
+        .footer-bottom strong {
+            color: #ffffff;
+        }
+
+
+        /* =========================================================
+           WHATSAPP
+        ========================================================= */
+
+        .whatsapp-btn {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            z-index: 999;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 13px 20px;
+
+            border-radius: 50px;
+
+            background: #25d366;
+
+            color: #ffffff;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 8px 25px rgba(37, 211, 102, .35);
+
+            transition: var(--transition);
+        }
+
+
+        .whatsapp-btn i {
+            font-size: 20px;
+        }
+
+
+        .whatsapp-btn:hover {
+            color: #ffffff;
+
+            transform: translateY(-4px);
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media (max-width: 991px) {
+
+            .top-contact {
+                gap: 12px;
+            }
+
+
+            .top-social {
+                display: none;
+            }
+
+
+            .main-navbar {
+                min-height: 72px;
+            }
+
+
+            .navbar-brand img {
+                width: 135px;
+            }
+
+
+            .main-navbar .nav-link {
+                padding: 12px 5px !important;
+            }
+
+
+            .main-navbar .nav-link::after {
+                display: none;
+            }
+
+
+            .navbar-nav {
+                padding: 15px 0;
+            }
+
+
+            .navbar-book-btn {
+                margin-bottom: 15px;
+            }
+
+
+            .hero-section {
+                height: 390px;
+            }
+
+
+            .service-image-wrapper img {
+                height: 380px;
+            }
+
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 767px) {
+
+            .top-bar {
+                display: none;
+            }
+
+
+            .main-navbar {
+                min-height: 72px;
+            }
+
+
+            .hero-section {
+                height: 390px;
+            }
+
+
+            .hero-content {
+                left: 25px;
+                right: 25px;
+            }
+
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+
+            .hero-content p {
+                font-size: 13px;
+            }
+
+
+            .intro-section {
+                padding: 60px 0;
+            }
+
+
+            .feature-section {
+                padding: 60px 0;
+            }
+
+
+            .process-section {
+                padding: 60px 0;
+            }
+
+
+            .service-image-wrapper img {
+                height: 300px;
+            }
+
+
+            .footer-bottom-inner {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+        @media (max-width: 575px) {
+
+            .navbar-brand img {
+                width: 120px;
+            }
+
+
+            .hero-section {
+                height: 360px;
+            }
+
+
+            .hero-content {
+                left: 20px;
+                right: 20px;
+            }
+
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+
+            .hero-btn {
+                padding: 11px 19px;
+            }
+
+
+            .service-image-wrapper img {
+                height: 260px;
+            }
+
+
+            .whatsapp-btn {
+                right: 15px;
+
+                bottom: 15px;
+
+                width: 52px;
+                height: 52px;
+
+                padding: 0;
+
+                justify-content: center;
+
+                border-radius: 50%;
+            }
+
+
+            .whatsapp-btn span {
+                display: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div class="top-bar-inner">
+
+            <div class="top-contact">
+
+                <a href="mailto:info@easygomovers.com">
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    info@gomovers.com
+
+                </a>
+
+
+                <a href="tel:+971504996091">
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                    +92 343 1535799
+
+                </a>
+
+
+                <span>
+
+                    <i class="bi bi-geo-alt-fill"></i>
+
+                    Kahuta, Rawalpindi, Pakistan
+
+                </span>
+
+            </div>
+
+
+            <div class="top-social">
+
+                <a href="#">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+
+                <a href="#">
+                    <i class="bi bi-pinterest"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="main-navbar navbar navbar-expand-lg">
+
+    <div class="container">
+
+
+        <a
+            class="navbar-brand"
+            href="index.html">
+
+            <img
+                src="./images/logo.png"
+                alt="Easy Go Movers Logo">
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar">
+
+
+            <ul class="navbar-nav mx-auto align-items-lg-center">
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="about-us.html">
+
+                        About Us
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle active"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown">
+
+                        Our Services
+
+                    </a>
+
+
+                    <ul class="dropdown-menu">
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="furniture-moving.html">
+
+                                <i class="bi bi-box-seam"></i>
+
+                                Furniture Moving
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="house-relocation.html">
+
+                                <i class="bi bi-house-door"></i>
+
+                                House Relocation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="pack-move.html">
+
+                                <i class="bi bi-boxes"></i>
+
+                                Packing & Moving
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="office-relocation.html">
+
+                                <i class="bi bi-building"></i>
+
+                                Office Relocation
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                class="dropdown-item"
+                                href="apartment-reallocation.html">
+
+                                <i class="bi bi-buildings"></i>
+
+                                Apartment Relocation
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="why-choose.html">
+
+                        Why Choose Us
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="our-blog.html">
+
+                        Our Blogs
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="contact-us.html">
+
+                        Contact Us
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <a
+                href="book-now.html"
+                class="navbar-book-btn">
+
+                Book Now
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero-section">
+
+
+    <!-- IMAGE REQUIRED:
+         office-relocation-hero.jpg
+    -->
+
+    <img
+        src="./images/office-reallocation.jpg"
+        alt="Office Relocation Services">
+
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <span>
+            GO MOVERS
+        </span>
+
+
+        <h1>
+            Office Relocation
+        </h1>
+
+
+        <p>
+            Professional office moving services designed to
+            relocate your business safely, efficiently and
+            with minimum disruption.
+        </p>
+
+
+        <a
+            href="contact-us.html"
+            class="hero-btn">
+
+            Get a Free Quote
+
+            <i class="bi bi-arrow-right"></i>
+
+        </a>
+
+
+        <div class="breadcrumb-text mt-3">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <span>
+                Office Relocation
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRODUCTION
+========================================================= -->
+
+<section class="intro-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <!-- IMAGE -->
+
+            <div class="col-lg-6">
+
+                <div class="service-image-wrapper">
+
+                    <!-- IMAGE REQUIRED:
+                         office-relocation.jpg
+                    -->
+
+                    <img
+                        src="./images/office-reallocation.jpg"
+                        alt="Professional Office Relocation">
+
+                    <div class="image-badge">
+
+                        <i class="bi bi-building me-2"></i>
+
+                        Professional Office Moving
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="col-lg-6">
+
+                <div class="section-subtitle">
+                    OFFICE MOVING SERVICES
+                </div>
+
+
+                <h2 class="section-title">
+                    Move Your Office With Confidence
+                </h2>
+
+
+                <div class="section-line"></div>
+
+
+                <p class="intro-text">
+
+                    Relocating an office requires careful
+                    planning, organization and professional
+                    handling. At Easy Go Movers, we provide
+                    complete office relocation solutions
+                    designed around your business requirements.
+
+                </p>
+
+
+                <p class="intro-text">
+
+                    From packing computers and office equipment
+                    to dismantling furniture, transporting
+                    everything safely and setting up your new
+                    workspace, our experienced team handles
+                    every stage of the move.
+
+                </p>
+
+
+                <p class="intro-text">
+
+                    Our goal is to make your office relocation
+                    smooth and efficient while helping your
+                    business get back to work as quickly as
+                    possible.
+
+                </p>
+
+
+                <a
+                    href="contact-us.html"
+                    class="hero-btn">
+
+                    Book Your Office Move
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES / FEATURES
+========================================================= -->
+
+<section class="feature-section">
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <div class="section-subtitle">
+                WHAT WE OFFER
+            </div>
+
+
+            <h2 class="section-title">
+                Complete Office Relocation Solutions
+            </h2>
+
+
+            <div class="section-line mx-auto"></div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- CARD 1 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-box-seam"></i>
+
+                    </div>
+
+
+                    <h4>
+                        Office Packing
+                    </h4>
+
+
+                    <p>
+
+                        We carefully pack computers,
+                        documents, electronics, furniture
+                        and other office belongings using
+                        suitable protective materials.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-tools"></i>
+
+                    </div>
+
+
+                    <h4>
+                        Furniture Dismantling
+                    </h4>
+
+
+                    <p>
+
+                        Our moving team can dismantle desks,
+                        workstations, cabinets and other
+                        office furniture before transportation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-truck"></i>
+
+                    </div>
+
+
+                    <h4>
+                        Safe Transportation
+                    </h4>
+
+
+                    <p>
+
+                        Your office equipment and furniture
+                        are transported using suitable vehicles
+                        and handled with care throughout the move.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-pc-display"></i>
+
+                    </div>
+
+
+                    <h4>
+                        Equipment Handling
+                    </h4>
+
+
+                    <p>
+
+                        Computers, monitors, printers and other
+                        sensitive office equipment receive
+                        careful handling during relocation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 5 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-building-check"></i>
+
+                    </div>
+
+
+                    <h4>
+                        New Office Setup
+                    </h4>
+
+
+                    <p>
+
+                        Once everything reaches your new
+                        location, our team can assist with
+                        furniture placement and workspace setup.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARD 6 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="bi bi-clock-history"></i>
+
+                    </div>
+
+
+                    <h4>
+                        Flexible Scheduling
+                    </h4>
+
+
+                    <p>
+
+                        We can arrange your relocation according
+                        to your preferred schedule to help
+                        minimize disruption to your business.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OFFICE MOVING PROCESS
+========================================================= -->
+
+<section class="process-section">
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <div class="section-subtitle">
+                OUR PROCESS
+            </div>
+
+
+            <h2 class="section-title">
+                How We Move Your Office
+            </h2>
+
+
+            <div class="section-line mx-auto"></div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- STEP 1 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+
+                    <h4>
+                        Plan
+                    </h4>
+
+
+                    <p>
+
+                        We understand your requirements
+                        and prepare a relocation plan
+                        according to your office size.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 2 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+
+                    <h4>
+                        Pack
+                    </h4>
+
+
+                    <p>
+
+                        Office equipment, furniture and
+                        other belongings are carefully
+                        packed and prepared.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 3 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+
+                    <h4>
+                        Move
+                    </h4>
+
+
+                    <p>
+
+                        Everything is safely transported
+                        to your new office using suitable
+                        moving vehicles.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STEP 4 -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="process-card">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+
+                    <h4>
+                        Setup
+                    </h4>
+
+
+                    <p>
+
+                        We help arrange your furniture and
+                        belongings so your new workspace
+                        is ready to use.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ADDITIONAL IMAGE SECTION
+========================================================= -->
+
+<section class="feature-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-6 order-lg-2">
+
+                <div class="service-image-wrapper">
+
+                    <!-- IMAGE REQUIRED:
+                         office-packing.jpg
+                    -->
+
+                    <img
+                        src="./images/office-reallocation2.jpg"
+                        alt="Office Packing Services">
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6 order-lg-1">
+
+                <div class="section-subtitle">
+                    CAREFUL HANDLING
+                </div>
+
+
+                <h2 class="section-title">
+                    We Take Care of Every Office Item
+                </h2>
+
+
+                <div class="section-line"></div>
+
+
+                <p class="intro-text">
+
+                    Office relocation involves more than
+                    simply moving furniture. Important
+                    documents, computers, electronics and
+                    equipment must be handled carefully.
+
+                </p>
+
+
+                <p class="intro-text">
+
+                    Our team focuses on organized packing,
+                    safe transportation and proper handling
+                    to help reduce the possibility of damage
+                    during your relocation.
+
+                </p>
+
+
+                <div class="row g-3 mt-2">
+
+
+                    <div class="col-sm-6">
+
+                        <strong class="text-dark">
+
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+
+                            Secure Packing
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <strong class="text-dark">
+
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+
+                            Professional Team
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <strong class="text-dark">
+
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+
+                            Safe Transport
+
+                        </strong>
+
+                    </div>
+
+
+                    <div class="col-sm-6">
+
+                        <strong class="text-dark">
+
+                            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+
+                            Organized Moving
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section text-center">
+
+    <div class="container">
+
+        <h2>
+            Ready to Move Your Office?
+        </h2>
+
+
+        <p>
+
+            Let Easy Go Movers handle your office relocation
+            from planning and packing to transportation and
+            setup. Contact us today for a moving quote.
+
+        </p>
+
+
+        <a
+            href="contact-us.html"
+            class="cta-btn">
+
+            Book Your Office Move
+
+            <i class="bi bi-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="main-footer">
+
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- COMPANY -->
+
+            <div class="col-lg-4">
+
+                <div class="footer-company">
+
+
+                    <img
+                        src="./images/logo.png"
+                        alt="Easy Go Movers"
+                        class="footer-logo">
+
+
+                    <p>
+
+                        Easy Go Movers & Packers LLC,
+                        established in 2010, is a professional
+                        moving and furniture installation
+                        company providing reliable relocation
+                        solutions across the UAE.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+
+                        <a href="#">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+
+                        <a href="#">
+                            <i class="bi bi-pinterest"></i>
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- USEFUL LINKS -->
+
+            <div class="col-6 col-lg-2">
+
+                <div class="footer-column">
+
+
+                    <h4>
+                        Useful Links
+                    </h4>
+
+
+                    <ul>
+
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="about-us.html">
+                                About Us
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="why-choose.html">
+                                Why Choose Us
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="our-blog.html">
+                                Our Blogs
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="contact-us.html">
+                                Contact Us
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SERVICES -->
+
+            <div class="col-6 col-lg-3">
+
+                <div class="footer-column">
+
+
+                    <h4>
+                        Our Services
+                    </h4>
+
+
+                    <ul>
+
+
+                        <li>
+
+                            <a href="furniture-moving.html">
+                                Furniture Moving
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="house-relocation.html">
+                                House Relocation
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="packing-and-moving.html">
+                                Packing & Moving
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="office-relocation.html">
+                                Office Relocation
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+                                Apartment Relocation
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a href="#">
+                                Commercial Relocation
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-3">
+
+                <div class="footer-column">
+
+
+                    <h4>
+                        Contact Us
+                    </h4>
+
+
+                    <div class="footer-contact">
+
+
+                        <div>
+
+                            <i class="bi bi-geo-alt-fill"></i>
+
+                            <span>
+
+                                Kahuta, Rawalpindi,
+                                Pakistan
+
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="bi bi-envelope-fill"></i>
+
+                            <a
+                                href="mailto:info@easygomovers.com">
+
+                                info@gomovers.com
+
+                            </a>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="bi bi-telephone-fill"></i>
+
+                            <a
+                                href="tel:+971504996091">
+
+                                +92 343 1535799
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="footer-bottom-inner">
+
+
+                <p>
+
+                    © 2026 Go Movers & Packers.
+                    All Rights Reserved.
+
+                </p>
+
+
+                <p>
+
+                    Designed by
+                    <strong>
+                        Software Engineer Usama Arshad
+                    </strong>
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     WHATSAPP
+========================================================= -->
+
+<a
+    href="https://wa.me/923431535799"
+    class="whatsapp-btn"
+    target="_blank"
+    aria-label="Contact Easy Go Movers on WhatsApp">
+
+    <i class="bi bi-whatsapp"></i>
+
+    <span>
+        WhatsApp Us
+    </span>
+
+</a>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>
